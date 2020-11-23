@@ -1,0 +1,5 @@
+The algorithm is written in C++ using OpenCV library. 
+1.	The user needs to give a path where the images are stored in a directory. It is important to specify the path accurately. These images are read into memory and stored in a vector. 
+2.	During the iteration between rows and columns, 21 pixels of a column is stored in an array and further passed to a function – “AverageFilter ()” in order to find the average value.
+3.	The “AverageFilter ()” function, finds the average of 21 pixels using a sliding window of size 11. Hence this results in storing 11 average values in a vector.
+4.	The local maxima are found among the average values vector by finding the maximum value. This local maxima is checked if it’s greater than the mentioned threshold value. If yes, all the pixel coordinates (11-pixel coordinates) of that respective local maxima are stored in the .txt file. Every Image contains its own .txt file where the pixel coordinates are stored. In our case, we will have 5 “.txt files” to store the pixel coordinates of 5 images. 
